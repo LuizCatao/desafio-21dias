@@ -48,7 +48,7 @@ function App() {
         <div className="max-w-5xl mx-auto relative z-10 text-center">
           <FadeIn>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display uppercase leading-[0.9] text-white mb-6">
-              A maioria dos atletas reprova na peneira <span className="text-primary">antes mesmo de mostrar</span> seu futebol
+              Você tem apenas <span className="text-primary">uma chance</span> de impressionar o avaliador
             </h1>
           </FadeIn>
           
@@ -148,11 +148,12 @@ function App() {
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
             <h2 className="text-4xl md:text-6xl font-display uppercase mb-6 leading-tight">
-              A maioria dos atletas <span className="text-primary">não é reprovada</span> por falta de talento
+              A maioria dos atletas <span className="text-primary">não são reprovados</span> por falta de talento
             </h2>
-            <p className="text-xl text-gray-400 mb-12">
+            <p className="text-xl text-gray-400 mb-4">
               A maioria acredita que a peneira é decidida apenas pela técnica. Mas o avaliador observa muito mais do que isso.
             </p>
+            <p className="text-lg font-bold text-white mb-8">No desafio você aprende:</p>
           </FadeIn>
 
           <div className="flex flex-col gap-6 text-left max-w-2xl mx-auto">
@@ -266,22 +267,28 @@ function App() {
             </h2>
           </FadeIn>
 
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { phase: "Fase 1", days: "Dias 1 a 7: Base", desc: "Ritmo, condicionamento e fundamentos técnicos." },
-              { phase: "Fase 2", days: "Dias 8 a 14: Intensificação", desc: "Explosão, velocidade, resistência específica e técnica sob pressão." },
-              { phase: "Fase 3", days: "Dias 15 a 21: Simulação", desc: "Treinos que simulam a peneira real: decisão, pressão, confiança e entrega máxima." }
+              { phase: "01", label: "Fase 1", days: "Dias 1 a 7", title: "Base", desc: "Ritmo, condicionamento e fundamentos técnicos.", icon: Target },
+              { phase: "02", label: "Fase 2", days: "Dias 8 a 14", title: "Intensificação", desc: "Explosão, velocidade, resistência específica e técnica sob pressão.", icon: Zap },
+              { phase: "03", label: "Fase 3", days: "Dias 15 a 21", title: "Simulação", desc: "Treinos que simulam a peneira real: decisão, pressão, confiança e entrega máxima.", icon: Flame }
             ].map((item, i) => (
-              <FadeIn key={i} delay={0.1 * i}>
-                <div className="bg-card border border-white/10 p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start md:items-center relative overflow-hidden group hover:border-primary/50 transition-colors">
-                  <div className="absolute top-0 left-0 w-2 h-full bg-primary transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300" />
-                  <div className="bg-white/5 px-6 py-3 rounded-lg border border-white/10 shrink-0 min-w-[200px]">
-                    <span className="text-primary font-bold block">{item.phase}</span>
-                    <span className="text-white font-display text-xl">{item.days}</span>
+              <FadeIn key={i} delay={0.15 * i}>
+                <div className="bg-card rounded-2xl overflow-hidden flex flex-col border border-white/10">
+                  <div className="h-1.5 bg-primary w-full" />
+                  <div className="p-7 flex flex-col gap-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[56px] font-display text-primary/20 leading-none">{item.phase}</span>
+                      <div className="bg-primary/10 p-3 rounded-xl border border-primary/20">
+                        <item.icon className="w-7 h-7 text-primary" />
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-primary text-sm font-bold uppercase tracking-widest mb-1">{item.label} — {item.days}</p>
+                      <h3 className="text-2xl font-display text-white mb-3">{item.title}</h3>
+                      <p className="text-gray-400 text-base leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
-                  <p className="text-xl text-gray-300 font-medium">
-                    {item.desc}
-                  </p>
                 </div>
               </FadeIn>
             ))}
@@ -332,19 +339,25 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: "Gabriel M.", age: "16 anos, Goiânia/GO", text: "Eu achava que só precisava treinar mais, mas percebi que tava errando justamente na hora da peneira. Depois do desafio comecei a entrar em campo com mais confiança, pedir mais a bola e participar mais do jogo." },
-              { name: "Lucas R.", age: "15 anos, Campinas/SP", text: "O que mais gostei foi que não fica só na teoria. Cada dia tem uma tarefa clara pra fazer. Antes eu chegava nervoso e travava, agora já sei o que o avaliador observa." },
-              { name: "Enzo T.", age: "17 anos, Belo Horizonte/MG", text: "Já tinha participado de outras peneiras e nunca entendia por que não era escolhido. O desafio me ajudou principalmente na parte mental e na atitude em campo." }
+              { name: "Gabriel M.", age: "16 anos, Goiânia/GO", initials: "GM", text: "Eu achava que só precisava treinar mais, mas percebi que tava errando justamente na hora da peneira. Depois do desafio comecei a entrar em campo com mais confiança, pedir mais a bola e participar mais do jogo." },
+              { name: "Lucas R.", age: "15 anos, Campinas/SP", initials: "LR", text: "O que mais gostei foi que não fica só na teoria. Cada dia tem uma tarefa clara pra fazer. Antes eu chegava nervoso e travava, agora já sei o que o avaliador observa." },
+              { name: "Enzo T.", age: "17 anos, Belo Horizonte/MG", initials: "ET", text: "Já tinha participado de outras peneiras e nunca entendia por que não era escolhido. O desafio me ajudou principalmente na parte mental e na atitude em campo." }
             ].map((item, i) => (
               <FadeIn key={i} delay={0.1 * i}>
                 <div className="bg-card border border-white/10 p-8 rounded-2xl h-full flex flex-col relative">
-                  <div className="flex text-primary mb-6">
+                  <div className="flex text-primary mb-5">
                     {[...Array(5)].map((_, j) => <Star key={j} className="w-5 h-5 fill-current" />)}
                   </div>
                   <p className="text-gray-300 mb-8 italic flex-grow">"{item.text}"</p>
-                  <div>
-                    <p className="font-bold text-white text-lg">{item.name}</p>
-                    <p className="text-primary text-sm">{item.age}</p>
+                  <div className="flex items-center gap-4 pt-4 border-t border-white/10">
+                    {/* TODO: Replace this avatar circle with a real photo by setting background-image */}
+                    <div className="w-12 h-12 rounded-full border-2 border-primary/50 bg-primary/10 flex items-center justify-center shrink-0 overflow-hidden">
+                      <span className="text-primary font-display text-base">{item.initials}</span>
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-base">{item.name}</p>
+                      <p className="text-primary text-xs font-medium">{item.age}</p>
+                    </div>
                   </div>
                 </div>
               </FadeIn>
@@ -366,24 +379,64 @@ function App() {
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
             {[
-              "Treinos de Velocidade para Futebol",
-              "Treinos para Fazer em Casa",
-              "Guia de Alimentação para Atletas",
-              "Como Montar Sua Rotina de Treinos",
-              "Checklist Completo do Dia da Peneira"
+              {
+                name: "Treinos de Velocidade para Futebol",
+                value: "R$37,00",
+                bullets: ["Exercícios específicos para ganho de velocidade", "Protocolos de sprint progressivo", "Rotina de 2 semanas"]
+              },
+              {
+                name: "Treinos para Fazer em Casa",
+                value: "R$27,00",
+                bullets: ["Sem necessidade de academia", "Exercícios com peso corporal", "Progressão por semana"]
+              },
+              {
+                name: "Guia de Alimentação para Atletas",
+                value: "R$27,00",
+                bullets: ["O que comer antes e após o treino", "Hidratação no dia da peneira", "Alimentos que aumentam energia"]
+              },
+              {
+                name: "Como Montar Sua Rotina de Treinos",
+                value: "R$27,00",
+                bullets: ["Planejamento semanal completo", "Equilíbrio entre treino e descanso", "Modelo pronto para usar"]
+              },
+              {
+                name: "Checklist Completo do Dia da Peneira",
+                value: "R$19,00",
+                bullets: ["O que levar no dia", "Como se preparar mentalmente", "O que fazer ao chegar no local"]
+              }
             ].map((bonus, i) => (
-              <FadeIn key={i} delay={0.1 * i} className="bg-background border border-primary/20 p-6 rounded-xl flex items-center gap-4">
-                <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
-                <span className="font-bold text-lg">{bonus}</span>
+              <FadeIn key={i} delay={0.08 * i}>
+                <div className="bg-background border border-primary/20 rounded-2xl overflow-hidden flex flex-col h-full">
+                  {/* TODO: Replace this colored top with a real product image */}
+                  <div className="bg-primary/10 border-b border-primary/20 h-28 flex items-center justify-center px-4">
+                    <CheckCircle2 className="w-12 h-12 text-primary/40" />
+                  </div>
+                  <div className="p-5 flex flex-col flex-grow gap-3">
+                    <p className="font-bold text-white text-base leading-snug">{bonus.name}</p>
+                    <p className="text-red-500 line-through text-sm font-semibold">{bonus.value}</p>
+                    <ul className="space-y-1.5 mt-auto">
+                      {bonus.bullets.map((b, j) => (
+                        <li key={j} className="flex items-start gap-2 text-gray-400 text-xs">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </FadeIn>
             ))}
           </div>
 
-          <FadeIn className="text-center">
-            <p className="text-gray-400 text-lg">Valor total dos bônus: <span className="line-through text-red-500 font-bold">R$ 137,00</span></p>
-            <p className="text-2xl font-bold text-primary mt-2">Hoje por R$ 0,00 no Plano Premium</p>
+          <FadeIn>
+            <div className="bg-background border border-primary/30 rounded-2xl p-6 text-center max-w-lg mx-auto">
+              <p className="text-gray-400 text-base mb-1">Valor total dos bônus:</p>
+              <p className="text-red-500 line-through text-2xl font-bold mb-3">R$137,00</p>
+              <p className="text-primary text-2xl font-bold mb-2">Hoje por R$0,00 no Plano Premium</p>
+              <p className="text-gray-300 text-sm">Você leva todos os bônus junto com o Desafio completo por apenas <strong className="text-white">R$27,90</strong>.</p>
+            </div>
           </FadeIn>
         </div>
       </section>
@@ -406,7 +459,7 @@ function App() {
                   <span className="text-4xl font-bold text-white">R$ 17,90</span>
                 </div>
                 
-                <ul className="space-y-4 mb-10 flex-grow">
+                <ul className="space-y-3 mb-10 flex-grow">
                   {[
                     "Desafio completo de 21 dias",
                     "Como funcionam as peneiras",
@@ -414,8 +467,21 @@ function App() {
                     "Capítulos extras"
                   ].map((feature, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-gray-500 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
                       <span>{feature}</span>
+                    </li>
+                  ))}
+                  <li className="pt-2 border-t border-white/10" />
+                  {[
+                    "Treinos de Velocidade",
+                    "Treinos para Fazer em Casa",
+                    "Guia de Alimentação",
+                    "Rotina de Treinos",
+                    "Checklist do Dia da Peneira"
+                  ].map((feature, i) => (
+                    <li key={i} className="flex items-center gap-3 text-gray-600">
+                      <X className="w-5 h-5 text-gray-600 shrink-0" />
+                      <span className="line-through">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -477,18 +543,28 @@ function App() {
       </section>
 
       {/* 13. Guarantee */}
-      <section className="py-12 px-4 border-t border-white/5">
-        <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 bg-card border border-white/10 p-8 rounded-2xl">
-          <div className="bg-primary/10 p-4 rounded-full">
-            <Shield className="w-16 h-16 text-primary" />
-          </div>
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold text-white mb-2">Garantia de 7 dias</h3>
-            <p className="text-gray-400">
-              Você pode entrar no desafio hoje, acessar todo o conteúdo e testar sem risco. Se perceber que o material não é para você, basta solicitar o reembolso dentro do prazo de 7 dias.
+      <section className="py-20 px-4 bg-[#0a0a0a] border-t border-white/5">
+        <FadeIn>
+          <div className="max-w-lg mx-auto text-center bg-card border border-primary/30 rounded-3xl p-10 shadow-[0_0_40px_rgba(57,255,20,0.08)]">
+            <div className="relative inline-flex items-center justify-center mb-6">
+              <div className="bg-primary/10 rounded-full p-5 border border-primary/30">
+                <Shield className="w-14 h-14 text-primary" />
+              </div>
+              <span className="absolute -bottom-1 -right-1 bg-primary text-black text-xs font-bold px-2 py-0.5 rounded-full">7 dias</span>
+            </div>
+            <h3 className="text-3xl font-display uppercase text-white mb-4">Garantia de 7 Dias</h3>
+            <p className="text-gray-400 text-base leading-relaxed mb-8">
+              Teste o material por 7 dias. Se perceber que o conteúdo não é para você, basta solicitar o reembolso dentro do prazo.
             </p>
+            <Button
+              className="w-full h-14 text-lg font-bold uppercase bg-primary hover:bg-primary/90 text-black transition-all hover:scale-105 shadow-[0_0_20px_rgba(57,255,20,0.3)]"
+              onClick={scrollToPricing}
+              data-testid="btn-guarantee-cta"
+            >
+              Comprar com segurança
+            </Button>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* 15. FAQ */}

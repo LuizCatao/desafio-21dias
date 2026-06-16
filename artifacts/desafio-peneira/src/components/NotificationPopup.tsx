@@ -3,11 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { User } from 'lucide-react';
 
 const NOTIFICATIONS = [
-  "Bruno L. de Campinas/SP comprou o Plano Premium",
-  "Rafael S. de Fortaleza/CE comprou o Plano Base",
-  "Enzo K. de Florianópolis/SC comprou o Plano Premium",
-  "João P. de São Paulo/SP comprou o Plano Premium",
-  "Vinícius T. de Natal/RN comprou o Plano Base"
+  { name: "Bruno L. de Campinas/SP", plan: "Plano Premium" },
+  { name: "Rafael S. de Fortaleza/CE", plan: "Plano Base" },
+  { name: "Enzo K. de Florianópolis/SC", plan: "Plano Premium" },
+  { name: "João P. de São Paulo/SP", plan: "Plano Premium" },
+  { name: "Vinícius T. de Natal/RN", plan: "Plano Base" },
+  { name: "Artur P. de Contagem/MG", plan: "Plano Premium" },
+  { name: "Fernando S. de Penápolis/SP", plan: "Plano Base" },
+  { name: "Hiago F. do Rio de Janeiro/RJ", plan: "Plano Premium" },
 ];
 
 export function NotificationPopups() {
@@ -15,53 +18,49 @@ export function NotificationPopups() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const cycleNotifications = () => {
+    const showNotification = () => {
       setIsVisible(true);
-      
       setTimeout(() => {
         setIsVisible(false);
         setTimeout(() => {
           setCurrentIndex((prev) => (prev + 1) % NOTIFICATIONS.length);
-        }, 500); // Wait for exit animation
-      }, 4000); // Show for 4 seconds
+        }, 600);
+      }, 5000);
     };
 
-    // Initial delay
-    const initialTimer = setTimeout(cycleNotifications, 2000);
-    
-    // Continuous cycle
-    const intervalTimer = setInterval(cycleNotifications, 6000); // 4s visible + 2s hidden
+    const initialTimer = setTimeout(showNotification, 3000);
+    const interval = setInterval(showNotification, 13000);
 
     return () => {
       clearTimeout(initialTimer);
-      clearInterval(intervalTimer);
+      clearInterval(interval);
     };
   }, []);
 
-  const currentNotification = NOTIFICATIONS[currentIndex];
-  const isPremium = currentNotification.includes("Premium");
+  const notif = NOTIFICATIONS[currentIndex];
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 w-full max-w-[320px] pointer-events-none">
+    <div className="fixed top-14 right-3 z-50 pointer-events-none sm:top-16 sm:right-4 max-w-[260px] sm:max-w-[300px]">
       <AnimatePresence>
         {isVisible && (
           <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="bg-card border border-primary/40 shadow-[0_0_15px_rgba(57,255,20,0.1)] rounded-lg p-3 flex items-center gap-3"
+            key={currentIndex}
+            initial={{ opacity: 0, x: 60, scale: 0.92 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 40, scale: 0.92 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="bg-[#111] border border-primary/50 shadow-[0_0_14px_rgba(57,255,20,0.12)] rounded-lg p-3 flex items-center gap-3"
             data-testid="notification-popup"
           >
-            <div className="bg-primary/10 p-2 rounded-full border border-primary/30">
-              <User className="w-5 h-5 text-primary" />
+            <div className="bg-primary/10 p-1.5 rounded-full border border-primary/30 shrink-0">
+              <User className="w-4 h-4 text-primary" />
             </div>
-            <div>
-              <p className="text-sm font-medium text-white leading-tight">
-                {currentNotification.split(" comprou ")[0]}
+            <div className="min-w-0">
+              <p className="text-xs font-semibold text-white leading-tight truncate">
+                {notif.name}
               </p>
-              <p className="text-xs text-primary font-semibold mt-0.5">
-                comprou o {currentNotification.split(" comprou ")[1]}
+              <p className="text-xs text-primary font-bold mt-0.5">
+                comprou o {notif.plan}
               </p>
             </div>
           </motion.div>

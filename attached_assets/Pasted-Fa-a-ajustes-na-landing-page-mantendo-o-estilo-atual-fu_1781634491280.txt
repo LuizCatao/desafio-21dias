@@ -1,0 +1,263 @@
+Faça ajustes na landing page mantendo o estilo atual: fundo preto, verde neon, visual esportivo, mobile-first e confortável para leitura no celular.
+
+
+
+1. HEADER / HERO
+
+Trocar a headline principal para:
+
+
+
+"VOCÊ TEM APENAS UMA CHANCE DE IMPRESSIONAR O AVALIADOR"
+
+
+
+Deixar "UMA CHANCE" em verde neon.
+
+
+
+Manter subtítulo e botões, mas deixar o topo mais forte visualmente no mobile.
+
+
+
+2. SEÇÃO "A maioria dos atletas..."
+
+Corrigir a copy para:
+
+
+
+"A maioria dos atletas não são reprovados por falta de talento"
+
+
+
+Abaixo dessa frase, adicionar um texto pequeno:
+
+
+
+"No desafio você aprende:"
+
+
+
+Depois manter os pontos com check verde:
+
+- O que faz um avaliador prestar atenção em você nos primeiros minutos.
+
+- Como se destacar mesmo sem ser o melhor jogador do campo.
+
+- Os erros que eliminam atletas antes mesmo de mostrarem seu futebol.
+
+
+
+3. SEÇÃO "PROTOCOLO EM 3 FASES"
+
+Melhorar o design dessa seção para ficar mais visual e atrativo no celular.
+
+Não depender de hover ou mouse.
+
+Sugestão: cards verticais com ícones grandes, número da fase em destaque, linha verde no topo e espaçamento confortável.
+
+
+
+Fase 1 — Dias 1 a 7: Base
+
+Fase 2 — Dias 8 a 14: Intensificação
+
+Fase 3 — Dias 15 a 21: Simulação
+
+
+
+4. DEPOIMENTOS
+
+Adicionar um círculo de foto/avatar em cada depoimento.
+
+Deixar um espaço fácil para trocar a imagem depois.
+
+O card deve ter:
+
+- Foto circular
+
+- Nome
+
+- Idade/cidade
+
+- 5 estrelas
+
+- Texto do depoimento
+
+
+
+5. BÔNUS DO PLANO PREMIUM
+
+Refazer essa seção para ficar parecida com cards de produto.
+
+
+
+Cada bônus deve ficar em um card/quadrado com:
+
+- Imagem no topo
+
+- Nome do bônus
+
+- Valor riscado em vermelho
+
+- 3 bullets com check verde
+
+
+
+Bônus:
+
+1. Treinos de Velocidade para Futebol — valor riscado R$37,00
+
+2. Treinos para Fazer em Casa — valor riscado R$27,00
+
+3. Guia de Alimentação para Atletas — valor riscado R$27,00
+
+4. Como Montar Sua Rotina de Treinos — valor riscado R$27,00
+
+5. Checklist Completo do Dia da Peneira — valor riscado R$19,00
+
+
+
+Depois dos cards, adicionar um bloco de resumo:
+
+
+
+"Valor total dos bônus: R$137,00" com R$137,00 riscado em vermelho.
+
+
+
+Abaixo:
+
+"Hoje por R$0,00 no Plano Premium"
+
+
+
+E reforçar:
+
+"Você leva todos os bônus junto com o Desafio completo por apenas R$27,90."
+
+
+
+6. PLANOS / PREÇOS
+
+No card do Plano Base, adicionar os itens que ele NÃO recebe com ícone de X cinza ou vermelho.
+
+
+
+Plano Base inclui:
+
+- Desafio completo de 21 dias
+
+- Como funcionam as peneiras
+
+- 6 pilares da aprovação
+
+- Capítulos extras
+
+
+
+Plano Base NÃO inclui:
+
+- Treinos de Velocidade
+
+- Treinos para Fazer em Casa
+
+- Guia de Alimentação
+
+- Rotina de Treinos
+
+- Checklist do Dia da Peneira
+
+
+
+No Plano Premium, manter como "Mais escolhido" e mostrar todos os itens com check verde.
+
+
+
+7. GARANTIA
+
+Refazer a seção de garantia para ficar mais parecida com um card premium claro e confiável.
+
+Usar:
+
+- Card centralizado
+
+- Ícone grande de escudo com "7 dias"
+
+- Título: "Garantia de 7 Dias"
+
+- Texto: "Teste o material por 7 dias. Se perceber que o conteúdo não é para você, basta solicitar o reembolso dentro do prazo."
+
+- Botão: "Comprar com segurança"
+
+
+
+Pode usar fundo levemente diferente para quebrar a página, mas manter a identidade preto + verde.
+
+
+
+8. POPUPS DE COMPRA
+
+Diminuir a frequência dos popups de "pessoas comprando".
+
+Atualmente está aparecendo rápido demais.
+
+
+
+Alterar para aparecer a cada 10 a 15 segundos.
+
+
+
+Mover os popups para o canto superior direito da tela.
+
+
+
+No mobile, garantir que o popup não cubra botão importante. Se necessário, mostrar no topo com largura menor e sumir rápido.
+
+
+
+Exemplos:
+
+- Bruno L. de Campinas/SP comprou o Plano Premium
+
+- Rafael S. de Fortaleza/CE comprou o Plano Base
+
+- Enzo K. de Florianópolis/SC comprou o Plano Premium
+
+- João P. de São Paulo/SP comprou o Plano Premium
+
+- Vinícius T. de Natal/RN comprou o Plano Base
+
+- Artur P. de Contagem/MG comprou o Plano Premium
+
+- Fernando S. de Penápolis/SP comprou o Plano Base
+
+- Hiago F. do Rio de Janeiro/RJ comprou o Plano Premium
+
+
+
+
+
+9. IMPORTANTE
+
+O site precisa ser principalmente para celular.
+
+Priorizar:
+
+- Leitura confortável no mobile
+
+- Textos grandes, mas sem poluir
+
+- Espaçamento bom entre seções
+
+- Botões fáceis de clicar
+
+- Nada que dependa de passar mouse
+
+- Layout bonito no mobile antes do desktop
+
+
+
+Não mudar a identidade visual principal.
+
+Manter preto, verde neon, branco e detalhes em vermelho apenas para X e valores riscados.
