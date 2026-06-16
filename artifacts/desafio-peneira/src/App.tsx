@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import rafaelDuarteImg from '@assets/Rafael_Duarte_1781635374131.png';
 import { 
   X, CheckCircle2, Shield, Star, 
   Target, Zap, Flame, Brain,
@@ -291,8 +292,11 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn>
               <div className="aspect-[4/5] rounded-2xl border-2 border-primary/50 overflow-hidden bg-background relative flex items-center justify-center">
-                {/* Placeholder for author image */}
-                <User className="w-32 h-32 text-white/10" />
+                <img
+                  src={rafaelDuarteImg}
+                  alt="Rafael Duarte — Mentor Esportivo"
+                  className="w-full h-full object-cover object-top"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <h3 className="text-3xl font-display text-white">Rafael Duarte</h3>
