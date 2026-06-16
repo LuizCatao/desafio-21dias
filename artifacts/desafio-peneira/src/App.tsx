@@ -420,9 +420,11 @@ function App() {
           <FadeIn>
             <div className="bg-background border border-primary/30 rounded-2xl p-6 text-center max-w-lg mx-auto">
               <p className="text-gray-400 text-base mb-1">Valor total dos bônus:</p>
-              <p className="text-red-500 line-through text-2xl font-bold mb-3">R$137,00</p>
-              <p className="text-primary text-2xl font-bold mb-2">Hoje por R$0,00 no Plano Premium</p>
-              <p className="text-gray-300 text-sm">Você leva todos os bônus junto com o Desafio completo por apenas <strong className="text-white">R$27,90</strong>.</p>
+              <p className="text-red-500 line-through text-2xl font-bold mb-4">R$137,00</p>
+              <p className="text-gray-300 text-base mb-1">Hoje por apenas</p>
+              <p className="text-primary text-5xl font-display font-bold mb-1 drop-shadow-[0_0_12px_rgba(57,255,20,0.5)]">R$27,90</p>
+              <p className="text-primary text-sm font-semibold mb-4">no Plano Premium</p>
+              <p className="text-gray-400 text-sm">Você recebe o Desafio completo de 21 dias + todos os 5 bônus sem pagar nada a mais por eles.</p>
             </div>
           </FadeIn>
         </div>
