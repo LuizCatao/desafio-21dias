@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import rafaelDuarteImg from '@assets/Rafael_Duarte_1781635374131.png';
+import derekImg from '@assets/images_(2)_1781635923831.jfif';
+import matheusImg from '@assets/8C9f5Thales_Castro_de_Paula17_anos__21023_1781635987142.jpg';
+import pedroImg from '@assets/images_(3)_1781636166873.jfif';
 import { 
   X, CheckCircle2, Shield, Star, 
   Target, Zap, Flame, Brain,
@@ -331,9 +334,9 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: "Gabriel M.", age: "16 anos, Goiânia/GO", initials: "GM", text: "Eu achava que só precisava treinar mais, mas percebi que tava errando justamente na hora da peneira. Depois do desafio comecei a entrar em campo com mais confiança, pedir mais a bola e participar mais do jogo." },
-              { name: "Lucas R.", age: "15 anos, Campinas/SP", initials: "LR", text: "O que mais gostei foi que não fica só na teoria. Cada dia tem uma tarefa clara pra fazer. Antes eu chegava nervoso e travava, agora já sei o que o avaliador observa." },
-              { name: "Enzo T.", age: "17 anos, Belo Horizonte/MG", initials: "ET", text: "Já tinha participado de outras peneiras e nunca entendia por que não era escolhido. O desafio me ajudou principalmente na parte mental e na atitude em campo." }
+              { name: "Derek R.", age: "15 anos • Belo Horizonte/MG", photo: derekImg, text: "Eu sempre chegava na peneira achando que era só jogar bem. Depois do desafio percebi que postura, confiança e tomada de decisão contam muito. Na última avaliação consegui me destacar muito mais." },
+              { name: "Matheus A.", age: "17 anos • Curitiba/PR", photo: matheusImg, text: "O que mais me ajudou foi entender exatamente o que os avaliadores observam. Antes eu ficava nervoso e sumia do jogo. Hoje consigo participar mais e mostrar meu futebol de verdade." },
+              { name: "Pedro H.", age: "17 anos • Recife/PE", photo: pedroImg, text: "Gostei porque o desafio é direto ao ponto. Cada dia tinha uma tarefa prática. Cheguei na peneira muito mais preparado física e mentalmente e me senti muito mais confiante." }
             ].map((item, i) => (
               <FadeIn key={i} delay={0.1 * i}>
                 <div className="bg-card border border-white/10 p-8 rounded-2xl h-full flex flex-col relative">
@@ -342,9 +345,8 @@ function App() {
                   </div>
                   <p className="text-gray-300 mb-8 italic flex-grow">"{item.text}"</p>
                   <div className="flex items-center gap-4 pt-4 border-t border-white/10">
-                    {/* TODO: Replace this avatar circle with a real photo by setting background-image */}
-                    <div className="w-12 h-12 rounded-full border-2 border-primary/50 bg-primary/10 flex items-center justify-center shrink-0 overflow-hidden">
-                      <span className="text-primary font-display text-base">{item.initials}</span>
+                    <div className="w-12 h-12 rounded-full border-2 border-primary/50 shrink-0 overflow-hidden">
+                      <img src={item.photo} alt={item.name} className="w-full h-full object-cover object-top" />
                     </div>
                     <div>
                       <p className="font-bold text-white text-base">{item.name}</p>
