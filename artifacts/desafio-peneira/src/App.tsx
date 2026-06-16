@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import rafaelDuarteImg from '@assets/Rafael_Duarte_1781635374131.png';
-import bonusVelocidadeImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_26_14_1781637984115.png';
+import bonusVelocidadeImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_32_13_1781638346409.png';
 import bonusCasaImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_26_46_1781638014356.png';
 import bonusAlimentacaoImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_27_09_1781638035878.png';
 import bonusRotinaImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_27_38_1781638063945.png';
