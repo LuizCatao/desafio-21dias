@@ -34,12 +34,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-black">
-      
       {/* 1. Announcement Bar */}
       <div className="sticky top-0 z-50 bg-primary text-primary-foreground font-bold text-center py-2 px-4 text-sm md:text-base uppercase tracking-wider shadow-[0_0_10px_rgba(57,255,20,0.3)]">
         ⚡ Oferta com desconto apenas hoje
       </div>
-
       {/* 2. Hero Section */}
       <section className="relative pt-16 pb-20 md:pt-24 md:pb-32 overflow-hidden px-4">
         {/* Background gradient blur */}
@@ -105,7 +103,6 @@ function App() {
           </FadeIn>
         </div>
       </section>
-
       {/* 4. Isso acontece com você? */}
       <section className="py-20 bg-card border-y border-white/5">
         <div className="max-w-6xl mx-auto px-4">
@@ -142,7 +139,6 @@ function App() {
           </FadeIn>
         </div>
       </section>
-
       {/* 5. Transition Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -150,10 +146,8 @@ function App() {
             <h2 className="text-4xl md:text-6xl font-display uppercase mb-6 leading-tight">
               A maioria dos atletas <span className="text-primary">não são reprovados</span> por falta de talento
             </h2>
-            <p className="text-xl text-gray-400 mb-4">
-              A maioria acredita que a peneira é decidida apenas pela técnica. Mas o avaliador observa muito mais do que isso.
-            </p>
-            <p className="text-lg font-bold text-white mb-8">No desafio você aprende:</p>
+            <p className="text-xl text-gray-400 mb-4">A maioria acredita que a peneira é decidida apenas pela técnica, mas o avaliador observa muito mais do que isso</p>
+            <p className="text-lg text-white mb-8 font-thin">No desafio você aprende:</p>
           </FadeIn>
 
           <div className="flex flex-col gap-6 text-left max-w-2xl mx-auto">
@@ -170,7 +164,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* 6. Apresentando o Desafio */}
       <section id="included" className="py-24 bg-card relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 relative z-10">
@@ -207,7 +200,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* 7. O que você vai receber */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
@@ -238,7 +230,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* 8. O segredo (Inverted colors) */}
       <section className="py-24 px-4 bg-primary text-black">
         <div className="max-w-5xl mx-auto text-center">
@@ -257,7 +248,6 @@ function App() {
           </FadeIn>
         </div>
       </section>
-
       {/* 9. Protocolo em 3 fases */}
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
@@ -295,7 +285,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* 10. Sobre o Autor */}
       <section className="py-20 bg-card border-y border-white/5">
         <div className="max-w-6xl mx-auto px-4">
@@ -327,7 +316,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* 11. Testimonials */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
@@ -365,7 +353,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* 12. Bônus do Plano Premium */}
       <section className="py-24 bg-card border-t border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5 blur-[100px] pointer-events-none" />
@@ -440,7 +427,6 @@ function App() {
           </FadeIn>
         </div>
       </section>
-
       {/* 14. Pricing */}
       <section id="pricing" className="py-24 px-4 relative">
         <div className="max-w-6xl mx-auto">
@@ -541,7 +527,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* 13. Guarantee */}
       <section className="py-20 px-4 bg-[#0a0a0a] border-t border-white/5">
         <FadeIn>
@@ -566,7 +551,6 @@ function App() {
           </div>
         </FadeIn>
       </section>
-
       {/* 15. FAQ */}
       <section className="py-24 px-4 bg-card">
         <div className="max-w-3xl mx-auto">
@@ -597,7 +581,6 @@ function App() {
           </Accordion>
         </div>
       </section>
-
       {/* 16. Final CTA */}
       <section className="py-32 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5" />
@@ -622,7 +605,6 @@ function App() {
           </FadeIn>
         </div>
       </section>
-
       {/* 17. Footer */}
       <footer className="py-8 text-center bg-black border-t border-white/10">
         <p className="text-primary font-display text-xl mb-2">Desafio de 21 Dias</p>
@@ -631,7 +613,6 @@ function App() {
           Este site não faz parte e nem é endossado pelo Facebook ou Google. A preparação não garante aprovação, o sucesso depende do esforço e dedicação de cada atleta.
         </p>
       </footer>
-
       {/* Animated Popups overlay */}
       <NotificationPopups />
     </div>
