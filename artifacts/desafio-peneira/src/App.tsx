@@ -1,6 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import rafaelDuarteImg from '@assets/Rafael_Duarte_1781635374131.png';
+import bonusVelocidadeImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_26_14_1781637984115.png';
+import bonusCasaImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_26_46_1781638014356.png';
+import bonusAlimentacaoImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_27_09_1781638035878.png';
+import bonusRotinaImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_27_38_1781638063945.png';
+import bonusChecklistImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_28_04_1781638091169.png';
 import derekImg from '@assets/images_(2)_1781635923831.jfif';
 import matheusImg from '@assets/8C9f5Thales_Castro_de_Paula17_anos__21023_1781635987142.jpg';
 import pedroImg from '@assets/images_(3)_1781636166873.jfif';
@@ -377,34 +382,38 @@ function App() {
               {
                 name: "Treinos de Velocidade para Futebol",
                 value: "R$37,00",
+                img: bonusVelocidadeImg,
                 bullets: ["Exercícios específicos para ganho de velocidade", "Protocolos de sprint progressivo", "Rotina de 2 semanas"]
               },
               {
                 name: "Treinos para Fazer em Casa",
                 value: "R$27,00",
+                img: bonusCasaImg,
                 bullets: ["Sem necessidade de academia", "Exercícios com peso corporal", "Progressão por semana"]
               },
               {
                 name: "Guia de Alimentação para Atletas",
                 value: "R$27,00",
+                img: bonusAlimentacaoImg,
                 bullets: ["O que comer antes e após o treino", "Hidratação no dia da peneira", "Alimentos que aumentam energia"]
               },
               {
                 name: "Como Montar Sua Rotina de Treinos",
                 value: "R$27,00",
+                img: bonusRotinaImg,
                 bullets: ["Planejamento semanal completo", "Equilíbrio entre treino e descanso", "Modelo pronto para usar"]
               },
               {
                 name: "Checklist Completo do Dia da Peneira",
                 value: "R$19,00",
+                img: bonusChecklistImg,
                 bullets: ["O que levar no dia", "Como se preparar mentalmente", "O que fazer ao chegar no local"]
               }
             ].map((bonus, i) => (
               <FadeIn key={i} delay={0.08 * i}>
                 <div className="bg-background border border-primary/20 rounded-2xl overflow-hidden flex flex-col h-full">
-                  {/* TODO: Replace this colored top with a real product image */}
-                  <div className="bg-primary/10 border-b border-primary/20 h-28 flex items-center justify-center px-4">
-                    <CheckCircle2 className="w-12 h-12 text-primary/40" />
+                  <div className="h-36 overflow-hidden">
+                    <img src={bonus.img} alt={bonus.name} className="w-full h-full object-cover object-center" />
                   </div>
                   <div className="p-5 flex flex-col flex-grow gap-3">
                     <p className="font-bold text-white text-base leading-snug">{bonus.name}</p>
