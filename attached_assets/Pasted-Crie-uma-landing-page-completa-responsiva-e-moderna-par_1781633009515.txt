@@ -1,0 +1,224 @@
+Crie uma landing page completa, responsiva e moderna para vender um infoproduto chamado:
+
+"Desafio de 21 Dias Para Passar na Peneira"
+
+Objetivo:
+Criar uma página de vendas de alta conversão para atletas jovens que querem chegar mais preparados para peneiras de futebol.
+
+Estilo visual:
+- Tema esportivo profissional.
+- Fundo preto ou grafite escuro.
+- Destaques em verde neon.
+- Textos brancos com boa legibilidade.
+- Design bonito, confortável de ler e menos poluído.
+- Layout mobile-first, mas também bonito no desktop.
+- Botões grandes, chamativos e com bordas arredondadas.
+- Usar cards com sombra suave, bordas verdes e espaçamento confortável.
+
+Estrutura da página:
+
+1. Barra superior fixa:
+Texto: "⚡ Oferta com desconto apenas hoje"
+Fundo verde neon, texto preto.
+
+2. Hero section:
+Título grande:
+"A maioria dos atletas reprova na peneira antes mesmo de mostrar seu futebol"
+
+Subtítulo:
+"Um desafio completo de 21 dias para ajudar você a chegar mais preparado física, técnica e mentalmente, entender o que os avaliadores observam e aumentar suas chances de aprovação."
+
+Botões:
+- "Quero começar agora"
+- "Ver o que está incluído"
+
+Adicionar imagem/mockup do produto ao lado ou abaixo no mobile.
+
+Adicionar 5 estrelas + texto:
+"Mais de 1.200 atletas treinando com o método"
+
+3. Notificações de compra falsas/animadas:
+Criar pequenos popups que aparecem no canto inferior esquerdo a cada alguns segundos, com nomes diferentes:
+- "Bruno L. de Campinas/SP comprou o Plano Premium"
+- "Rafael S. de Fortaleza/CE comprou o Plano Base"
+- "Enzo K. de Florianópolis/SC comprou o Plano Premium"
+- "João P. de São Paulo/SP comprou o Plano Premium"
+- "Vinícius T. de Natal/RN comprou o Plano Base"
+
+Design: pequeno card preto com borda verde, ícone de usuário verde, nome em branco, plano em verde.
+
+4. Seção "Isso acontece com você?":
+Título:
+"Isso acontece com você?"
+
+Cards com ícone de X vermelho:
+- Você treina bem, mas na hora da peneira trava e não rende igual.
+- Fica quieto em campo, não pede a bola e sabe que isso te prejudica.
+- Não sabe exatamente o que o avaliador quer ver em você.
+- Chega na peneira sem preparo físico específico e sente que falta algo.
+- Já foi reprovado antes e não entendeu direito o motivo.
+- Quer muito uma oportunidade, mas não sabe como se preparar certo.
+
+Texto final:
+"Se você marcou pelo menos um desses pontos, este desafio foi feito para você."
+
+5. Seção de transição:
+Título:
+"A maioria dos atletas não é reprovada por falta de talento"
+
+Texto:
+"A maioria acredita que a peneira é decidida apenas pela técnica. Mas o avaliador observa muito mais do que isso."
+
+Lista com checks verdes:
+- O que faz um avaliador prestar atenção em você nos primeiros minutos.
+- Como se destacar mesmo sem ser o melhor jogador do campo.
+- Os erros que eliminam atletas antes mesmo de mostrarem seu futebol.
+
+6. Seção "Apresentando o Desafio":
+Título:
+"Apresentando o Desafio de 21 Dias Para a Peneira"
+
+Texto:
+"Um protocolo completo criado para atletas que querem chegar na peneira preparados de verdade. Não é só teoria: é um plano dia a dia com treinos, mentalidade, estratégias e preparação para você se destacar em campo."
+
+Adicionar mockup grande do produto.
+
+Botão:
+"Quero começar hoje"
+
+7. Seção "O que você vai receber":
+Criar cards com ícones:
+- Como fazer o avaliador notar você nos primeiros minutos.
+- O que diferencia atletas aprovados dos reprovados.
+- 21 dias de treinos completos.
+- Os últimos 3 dias antes da peneira.
+- O comportamento que aumenta suas chances de aprovação.
+- Se você não passar: como reagir e buscar novas oportunidades.
+
+8. Seção "O segredo que nenhum avaliador vai te contar":
+Fundo verde neon com texto preto, para quebrar o padrão.
+
+Título:
+"O segredo que nenhum avaliador vai te contar"
+
+Texto:
+"O avaliador não procura apenas o atleta mais habilidoso. Ele procura atitude, confiança, comunicação, participação no jogo e comportamento competitivo. Muitas vezes, um atleta tecnicamente inferior é aprovado porque consegue chamar mais atenção em campo."
+
+Destacar frase:
+"Técnica e físico qualquer um treina. O que realmente aprova é vontade demonstrada em campo."
+
+9. Seção "Protocolo em 3 fases":
+Criar 3 cards:
+Fase 1 — Dias 1 a 7: Base
+"Ritmo, condicionamento e fundamentos técnicos."
+
+Fase 2 — Dias 8 a 14: Intensificação
+"Explosão, velocidade, resistência específica e técnica sob pressão."
+
+Fase 3 — Dias 15 a 21: Simulação
+"Treinos que simulam a peneira real: decisão, pressão, confiança e entrega máxima."
+
+10. Seção "Sobre o Autor":
+Título:
+"Quem é Rafael Duarte?"
+
+Adicionar espaço grande para imagem/foto do Rafael Duarte.
+
+Texto:
+"Rafael Duarte é mentor esportivo focado em preparação de jovens atletas para peneiras e avaliações de futebol. Depois de acompanhar de perto os erros mais comuns cometidos por jogadores em testes, criou o Desafio de 21 Dias para ajudar atletas a treinarem com mais direção, confiança e estratégia."
+
+Texto complementar:
+"O foco do método não é prometer aprovação garantida, mas ajudar o atleta a chegar mais preparado, entender o que os avaliadores observam e demonstrar melhor seu potencial dentro de campo."
+
+11. Seção de depoimentos:
+Criar 3 cards com 5 estrelas:
+
+Gabriel M. — 16 anos, Goiânia/GO
+"Eu achava que só precisava treinar mais, mas percebi que tava errando justamente na hora da peneira. Depois do desafio comecei a entrar em campo com mais confiança, pedir mais a bola e participar mais do jogo."
+
+Lucas R. — 15 anos, Campinas/SP
+"O que mais gostei foi que não fica só na teoria. Cada dia tem uma tarefa clara pra fazer. Antes eu chegava nervoso e travava, agora já sei o que o avaliador observa."
+
+Enzo T. — 17 anos, Belo Horizonte/MG
+"Já tinha participado de outras peneiras e nunca entendia por que não era escolhido. O desafio me ajudou principalmente na parte mental e na atitude em campo."
+
+12. Seção "Bônus do Plano Premium":
+Cards para:
+- Treinos de Velocidade para Futebol.
+- Treinos para Fazer em Casa.
+- Guia de Alimentação para Atletas.
+- Como Montar Sua Rotina de Treinos.
+- Checklist Completo do Dia da Peneira.
+
+Mostrar valor total riscado: R$137,00.
+Texto:
+"No Plano Premium você leva tudo isso junto com o Desafio completo."
+
+13. Seção de garantia:
+Título:
+"🛡️ Garantia de 7 dias"
+
+Texto:
+"Você pode entrar no desafio hoje, acessar todo o conteúdo e testar sem risco. Se perceber que o material não é para você, basta solicitar o reembolso dentro do prazo de 7 dias."
+
+14. Seção de preços:
+Criar dois cards:
+
+Plano Base — R$17,90
+Inclui:
+- Desafio completo de 21 dias.
+- Como funcionam as peneiras.
+- 6 pilares da aprovação.
+- Capítulos extras.
+
+Botão:
+"Quero o Plano Base"
+
+Plano Premium — R$27,90
+Selo: "Mais escolhido"
+Inclui:
+- Tudo do Plano Base.
+- Treinos de Velocidade.
+- Treinos para Fazer em Casa.
+- Guia de Alimentação.
+- Rotina de Treinos.
+- Checklist do Dia da Peneira.
+
+Valor riscado: R$164,90
+Preço: R$27,90
+Texto: "Você economiza mais de R$130"
+
+Botão:
+"Quero o Plano Premium"
+
+15. FAQ:
+Perguntas:
+- O acesso é imediato?
+- Funciona para qualquer posição?
+- Preciso de academia?
+- Tenho garantia?
+- Serve para quem já foi reprovado?
+- É promessa de aprovação garantida?
+
+Na resposta da última:
+"Não. Nenhum método sério pode garantir aprovação. O objetivo é aumentar sua preparação, confiança e clareza sobre o que fazer antes, durante e depois da peneira."
+
+16. CTA final:
+Título:
+"Sua próxima peneira pode ser diferente"
+
+Texto:
+"Pare de treinar no escuro. Siga um plano de 21 dias e chegue mais preparado para mostrar seu futebol."
+
+Botão:
+"Começar agora"
+
+Requisitos técnicos:
+- Criar em React.
+- Usar CSS moderno.
+- Página 100% responsiva.
+- Animações suaves.
+- Botões com hover.
+- Layout confortável para leitura no celular.
+- Não usar design poluído.
+- Deixar comentários no código indicando onde trocar imagens, links dos botões e mockups.

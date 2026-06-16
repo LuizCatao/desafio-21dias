@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "CzEUKV6cGqgEJkeUBIT4X"
+uri = "file://artifacts/desafio-peneira/public/hero-footballer.png"
+type = "image"
+title = "Hero footballer standing on pitch"
+
+[[generated]]
+id = "woXVgzNYUNodtF5TIMYXx"
+uri = "file://artifacts/desafio-peneira/public/course-mockup.png"
+type = "image"
+title = "Digital course product mockup"

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Desafio 21 Dias - Peneira"
+version = "1.0.0"
+id = "artifacts/desafio-peneira"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20543
+
+[services.development]
+run = "pnpm --filter @workspace/desafio-peneira run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/desafio-peneira", "run", "build" ]
+publicDir = "artifacts/desafio-peneira/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20543"
+BASE_PATH = "/"
