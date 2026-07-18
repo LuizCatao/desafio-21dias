@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import rafaelDuarteImg from '@assets/Rafael_Duarte_1781635374131.png';
 import bonusVelocidadeImg from '@assets/ChatGPT_Image_16_de_jun._de_2026,_16_32_13_1781638346409.png';
@@ -12,7 +12,7 @@ import pedroImg from '@assets/images_(3)_1781636166873.jfif';
 import { 
   X, CheckCircle2, Shield, Star, 
   Target, Zap, Flame, Brain,
-  ChevronRight, ChevronDown, PlayCircle,
+  ChevronRight, ChevronDown,
   User
 } from 'lucide-react';
 import { NotificationPopups } from '@/components/NotificationPopup';
@@ -23,6 +23,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
   <motion.div
@@ -36,9 +44,30 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: React.React
   </motion.div>
 );
 
+const BASE_CHECKOUT_URL = "https://pay.wiapy.com/VLfLK8I50Q";
+const PREMIUM_CHECKOUT_URL = "https://pay.wiapy.com/7RM8kJo9Ne";
+const OTO_CHECKOUT_URL = "https://pay.wiapy.com/Ly2h52nWFt3Y";
+
 function App() {
   const scrollToPricing = () => {
     document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const [showOto, setShowOto] = useState(false);
+
+  const handleBaseBuyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setShowOto(true);
+  };
+
+  const handleDeclineOto = () => {
+    setShowOto(false);
+    window.open(BASE_CHECKOUT_URL, "_blank", "noopener,noreferrer");
+  };
+
+  const handleAcceptOto = () => {
+    setShowOto(false);
+    window.open(OTO_CHECKOUT_URL, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -94,21 +123,17 @@ function App() {
             </span>
           </FadeIn>
 
-          <FadeIn delay={0.5} className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-            <img 
-              src="/hero-footballer.png" 
-              alt="Atleta em campo" 
-              className="w-full h-auto object-cover aspect-video object-center opacity-80"
-              onError={(e) => {
-                // Fallback styling if image not yet generated
-                (e.target as HTMLElement).style.display = 'none';
-                (e.target as HTMLElement).nextElementSibling?.classList.remove('hidden');
-              }}
-            />
-            <div className="hidden absolute inset-0 bg-secondary flex items-center justify-center">
-              <PlayCircle className="w-20 h-20 text-primary/50" />
+          <FadeIn delay={0.5} className="relative max-w-sm mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <div style={{ padding: "177.78% 0 0 0", position: "relative" }}>
+              <iframe
+                src="https://player.vimeo.com/video/1210234646?badge=0&autopause=0&player_id=0&app_id=58479"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                title="VSL"
+              />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
           </FadeIn>
         </div>
       </section>
@@ -437,7 +462,7 @@ function App() {
               <p className="text-gray-400 text-base mb-1">Valor total dos bônus:</p>
               <p className="text-red-500 line-through text-2xl font-bold mb-4">R$137,00</p>
               <p className="text-gray-300 text-base mb-1">Hoje por apenas</p>
-              <p className="text-primary text-5xl font-display font-bold mb-1 drop-shadow-[0_0_12px_rgba(57,255,20,0.5)]">R$27,90</p>
+              <p className="text-primary text-5xl font-display font-bold mb-1 drop-shadow-[0_0_12px_rgba(57,255,20,0.5)]">R$19,90</p>
               <p className="text-primary text-sm font-semibold mb-4">no Plano Premium</p>
               <p className="text-gray-400 text-sm">Você recebe o Desafio completo de 21 dias + todos os 5 bônus sem pagar nada a mais por eles.</p>
             </div>
@@ -459,7 +484,7 @@ function App() {
               <div className="bg-card border border-white/10 rounded-3xl p-8 flex flex-col h-full">
                 <h3 className="text-3xl font-display text-white mb-2">Plano Base</h3>
                 <div className="flex items-baseline gap-2 mb-8">
-                  <span className="text-4xl font-bold text-white">R$ 17,90</span>
+                  <span className="text-4xl font-bold text-white">R$ 9,90</span>
                 </div>
                 
                 <ul className="space-y-3 mb-10 flex-grow">
@@ -476,11 +501,11 @@ function App() {
                   ))}
                   <li className="pt-2 border-t border-white/10" />
                   {[
-                    "Treinos de Velocidade",
-                    "Treinos para Fazer em Casa",
-                    "Guia de Alimentação",
-                    "Rotina de Treinos",
-                    "Checklist do Dia da Peneira"
+                    "Bônus: Treinos de Velocidade",
+                    "Bônus: Treinos para Fazer em Casa",
+                    "Bônus: Guia de Alimentação",
+                    "Bônus: Rotina de Treinos",
+                    "Bônus: Checklist do Dia da Peneira"
                   ].map((feature, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-600">
                       <X className="w-5 h-5 text-gray-600 shrink-0" />
@@ -489,11 +514,19 @@ function App() {
                   ))}
                 </ul>
 
-                <Button 
+                <Button
+                  asChild
                   className="w-full h-14 text-lg font-bold uppercase bg-white text-black hover:bg-gray-200"
                   data-testid="btn-buy-base"
                 >
-                  Quero o Plano Base
+                  <a
+                    href={BASE_CHECKOUT_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={handleBaseBuyClick}
+                  >
+                    Quero o Plano Base
+                  </a>
                 </Button>
               </div>
             </FadeIn>
@@ -509,9 +542,9 @@ function App() {
                 <div className="flex flex-col mb-8">
                   <span className="text-sm text-gray-400 line-through">De R$ 164,90 por apenas</span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-primary">R$ 27,90</span>
+                    <span className="text-5xl font-bold text-primary">R$ 19,90</span>
                   </div>
-                  <span className="text-sm text-primary font-bold mt-1 bg-primary/10 self-start px-2 py-1 rounded">Você economiza mais de R$ 130</span>
+                  <span className="text-sm text-primary font-bold mt-1 bg-primary/10 self-start px-2 py-1 rounded">Você economiza mais de R$ 145</span>
                 </div>
                 
                 <ul className="space-y-4 mb-10 flex-grow">
@@ -520,11 +553,11 @@ function App() {
                     <span>Tudo do Plano Base +</span>
                   </li>
                   {[
-                    "Treinos de Velocidade",
-                    "Treinos para Fazer em Casa",
-                    "Guia de Alimentação",
-                    "Rotina de Treinos",
-                    "Checklist do Dia da Peneira"
+                    "Bônus: Treinos de Velocidade",
+                    "Bônus: Treinos para Fazer em Casa",
+                    "Bônus: Guia de Alimentação",
+                    "Bônus: Rotina de Treinos",
+                    "Bônus: Checklist do Dia da Peneira"
                   ].map((feature, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-300">
                       <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
@@ -533,11 +566,14 @@ function App() {
                   ))}
                 </ul>
 
-                <Button 
+                <Button
+                  asChild
                   className="w-full h-14 text-lg font-bold uppercase bg-primary text-black hover:bg-primary/90 hover:scale-105 transition-transform shadow-[0_0_20px_rgba(57,255,20,0.4)]"
                   data-testid="btn-buy-premium"
                 >
-                  Quero o Plano Premium
+                  <a href={PREMIUM_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                    Quero o Plano Premium
+                  </a>
                 </Button>
               </div>
             </FadeIn>
@@ -632,6 +668,37 @@ function App() {
       </footer>
       {/* Animated Popups overlay */}
       <NotificationPopups />
+
+      {/* One-Time Offer: upgrade oferecido a quem tenta comprar o Plano Base */}
+      <Dialog open={showOto} onOpenChange={setShowOto}>
+        <DialogContent className="border-primary/40 bg-card" data-testid="dialog-oto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-display uppercase text-primary">
+              Espera! Oferta única antes de continuar
+            </DialogTitle>
+            <DialogDescription className="text-gray-300 text-base pt-2">
+              Antes de seguir com o Plano Base, que tal levar o <strong className="text-white">Plano Premium completo</strong> — com os 5 bônus inclusos — por um preço especial de <strong className="text-primary">R$ 14,90</strong>? Essa oferta some se você sair desta tela.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="flex-col sm:flex-col gap-2 mt-2">
+            <Button
+              className="w-full h-12 text-base font-bold uppercase bg-primary text-black hover:bg-primary/90"
+              onClick={handleAcceptOto}
+              data-testid="btn-accept-oto"
+            >
+              Sim! Quero o Premium por R$ 14,90
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full h-12 text-sm text-gray-400 hover:text-white"
+              onClick={handleDeclineOto}
+              data-testid="btn-decline-oto"
+            >
+              Não, obrigado. Seguir com o Plano Base
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

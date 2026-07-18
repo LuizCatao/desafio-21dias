@@ -1,0 +1,15 @@
+[build]
+  command = "pnpm --filter @workspace/desafio-peneira run build"
+  publish = "artifacts/desafio-peneira/dist/public"
+
+[build.environment]
+  PORT = "20543"
+  BASE_PATH = "/"
+  NODE_VERSION = "24"
+  PNPM_VERSION = "9"
+  CI = "true"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
